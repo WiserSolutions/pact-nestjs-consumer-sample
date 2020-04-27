@@ -1,4 +1,4 @@
-name: Consumer pact  CI/CD
+name: Backend Chat CI/CD
 on:
   push:
     branches:
@@ -19,9 +19,8 @@ jobs:
           npm install
           npm test
       - name: Build Image
-        run: docker build -t consumer .
+        run: docker build -t back .
       - name: Run Builded Image
-        run: docker run -p 8082:8080 -t consumer
+        run: docker run -p 8082:8080 -t back
       - name: View Images
         run: docker ps
-        
