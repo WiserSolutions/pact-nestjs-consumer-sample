@@ -1,4 +1,4 @@
-name: Backend Chat CI/CD
+name: NestConsumer CI/CD
 on:
   push:
     branches:
@@ -19,9 +19,9 @@ jobs:
           npm install
           npm test
       - name: Build Image
-        run: docker build -t back .
+        run: docker build -t loneconsumer .
       - name: Run Builded Image
-        run: docker run -p 8082:8080 -t back
+        run: docker run -p 3001:3001 -t loneconsumer
       - name: View Images
         run: docker ps
         
