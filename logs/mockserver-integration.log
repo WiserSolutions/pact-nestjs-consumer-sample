@@ -1,0 +1,115 @@
+I, [2020-04-11T23:42:10.985035 #98257]  INFO -- : Registered expected interaction GET /cats
+D, [2020-04-11T23:42:10.985256 #98257] DEBUG -- : {
+  "description": "a request for the cat with the builder pattern",
+  "providerState": "I have a single cat",
+  "request": {
+    "method": "GET",
+    "path": "/cats",
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "json_class": "Pact::SomethingLike",
+      "contents": {
+        "name": "cat",
+        "age": 12,
+        "breed": "angora"
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2020-04-11T23:42:10.992745 #98257]  INFO -- : Received request GET /cats
+D, [2020-04-11T23:42:10.992825 #98257] DEBUG -- : {
+  "path": "/cats",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json",
+    "User-Agent": "axios/0.19.2",
+    "Host": "localhost:3500",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-04-11T23:42:10.993101 #98257]  INFO -- : Found matching response for GET /cats
+D, [2020-04-11T23:42:10.993160 #98257] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "json_class": "Pact::SomethingLike",
+    "contents": {
+      "name": "cat",
+      "age": 12,
+      "breed": "angora"
+    }
+  }
+}
+I, [2020-04-11T23:42:10.998506 #98257]  INFO -- : Verifying - interactions matched
+I, [2020-04-11T23:42:11.001727 #98257]  INFO -- : Cleared interactions
+I, [2020-04-11T23:42:11.005705 #98257]  INFO -- : Registered expected interaction GET /cats
+D, [2020-04-11T23:42:11.005793 #98257] DEBUG -- : {
+  "description": "a request for cat with the object pattern",
+  "providerState": "I have a single cat object",
+  "request": {
+    "method": "GET",
+    "path": "/cats",
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "json_class": "Pact::SomethingLike",
+      "contents": {
+        "name": "cat",
+        "age": 12,
+        "breed": "angora"
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2020-04-11T23:42:11.009087 #98257]  INFO -- : Received request GET /cats
+D, [2020-04-11T23:42:11.009171 #98257] DEBUG -- : {
+  "path": "/cats",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json",
+    "User-Agent": "axios/0.19.2",
+    "Host": "localhost:3500",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-04-11T23:42:11.009261 #98257]  INFO -- : Found matching response for GET /cats
+D, [2020-04-11T23:42:11.009310 #98257] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "json_class": "Pact::SomethingLike",
+    "contents": {
+      "name": "cat",
+      "age": 12,
+      "breed": "angora"
+    }
+  }
+}
+I, [2020-04-11T23:42:11.012853 #98257]  INFO -- : Verifying - interactions matched
+I, [2020-04-11T23:42:11.015687 #98257]  INFO -- : Cleared interactions
+I, [2020-04-11T23:42:11.049130 #98257]  INFO -- : Writing pact for catsPovider to /Users/wellingtonaquino/Documents/wiser-repo/pact-consumer-provider-test/nestjs/pact-consumer/pacts/catscosumer-catspovider.json
