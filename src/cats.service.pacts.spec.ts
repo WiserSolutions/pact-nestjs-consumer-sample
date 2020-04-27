@@ -92,7 +92,7 @@ describe('Pact Testing', () => {
     it("returns the correct response", done => {
       catsService.setUrl(url);
       catsService.getCatPlain().then((response: any) => {
-        expect(response.status).toBe(2005);
+        expect(response.status).toBe(200);
         expect(response.data).toEqual(catExample);
         done();
       }, done);
