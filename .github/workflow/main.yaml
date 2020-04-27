@@ -1,1 +1,27 @@
-
+name: Consumer pact  CI/CD
+on:
+  push:
+    branches:
+       - master
+  pull_request:
+    branches: 
+      - master
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Install & Tests
+        run: 
+          npm install
+          npm test
+      - name: Build Image
+        run: docker build -t consumer .
+      - name: Run Builded Image
+        run: docker run -p 8082:8080 -t consumer
+      - name: View Images
+        run: docker ps
+        
