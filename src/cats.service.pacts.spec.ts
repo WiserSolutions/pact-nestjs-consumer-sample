@@ -13,7 +13,7 @@ describe('Pact Testing', () => {
   const pactBrokerUrl = process.env.PACT_BROKER_URL || 'http://localhost:8080';
   const pactBrokerUsername = process.env.PACT_BROKER_USERNAME || 'pact_workshop';
   const pactBrokerPassword = process.env.PACT_BROKER_PASSWORD || 'pact_workshop';
-  const consumerVersion = process.env.CONSUMERV || '1.0.1';
+  const consumerVersion = process.env.CONSUMER_VERSION || '1.0.1';
 
   const publishBrokerOpts = {
     pactFilesOrDirs: ['./pacts/'],
