@@ -9,6 +9,9 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
+    env:
+        PACT_BROKER_URL: https://pact-broker.int.k8s.getmobee.com/
+        PACT_MOCK_URL: http://localhost:3500 
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
@@ -21,7 +24,7 @@ jobs:
       - name: Build Image
         run: docker build -t loneconsumer .
       - name: Run Builded Image
-        run: docker run -p 3001:3001 --env PACT_BROKER_URL=http://localhost:9898 --env pactBrokerPassword=${{secrets.pactBrokerPassword}} --env pactBrokerUsername=${{secrets.pactBrokerUsername}} --env CONSUMER_VERSION=1.0.1 --env PACT_MOCK_URL=http://localhost:3500 --env PROVIDER_URL=http://localhost:3000  -t loneconsumer 
+        run: docker run -p 3001:3001 --env PACT_BROKER_URL=$PACT_BROKER_URL --env pactBrokerPassword=${{secrets.pactBrokerPassword}} --env pactBrokerUsername=${{secrets.pactBrokerUsername}} --env CONSUMER_VERSION=$GITHUB_SHA --env PACT_MOCK_URL=$PACT_MOCK_URL --env PROVIDER_URL=http://localhost:3000  -t loneconsumer 
       - name: View Images
         run: docker ps
         
