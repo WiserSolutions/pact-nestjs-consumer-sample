@@ -21,7 +21,7 @@ jobs:
       - name: Build Image
         run: docker build -t loneconsumer .
       - name: Run Builded Image
-        run: docker run -p 3001:3001 --env PACT_BROKER_URL=http://localhost:9898 --env pactBrokerPassword=pact_workshop --env pactBrokerUsername=pact_workshop --env CONSUMER_VERSION=1.0.1 --env PACT_MOCK_URL=http://localhost:3500 --env PROVIDER_URL=http://localhost:3000  -t loneconsumer 
+        run: docker run -p 3001:3001 --env PACT_BROKER_URL=http://localhost:9898 --env pactBrokerPassword=${{secrets.pactBrokerPassword}} --env pactBrokerUsername=${{secrets.pactBrokerUsername}} --env CONSUMER_VERSION=1.0.1 --env PACT_MOCK_URL=http://localhost:3500 --env PROVIDER_URL=http://localhost:3000  -t loneconsumer 
       - name: View Images
         run: docker ps
         
