@@ -53,10 +53,11 @@ describe('Pact Testing', () => {
   );
 
   afterAll(() => {
-    console.log(url);
-    console.log(pactBrokerUrl);
-    console.log(pactBrokerPassword);
-    console.log(pactBrokerUsername);
+    console.log('consumer version: '+consumerVersion);
+    console.log('mock url: '+url);
+    console.log('broker url: '+pactBrokerUrl);
+    console.log('p: '+pactBrokerPassword);
+    console.log('u: '+pactBrokerUsername);
     
     pact.publishPacts(publishBrokerOpts).then(() => {
       console.log('Pact contract publishing complete!');
