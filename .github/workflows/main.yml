@@ -39,6 +39,6 @@ jobs:
     steps:
       - name: Can i Deploy
         run: |
-            curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.83.0/pact-1.83.0-linux-x86_64.tar.gz tar xzf pact-1.83.0-linux-x86_64.tar.gz
+            curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.83.0/pact-1.83.0-linux-x86.tar.gz tar xzf pact-1.83.0-linux-x86.tar.gz
             cd pact/bin
             ./pact-broker can-i-deploy -a, --pacticipant=catsConsumer -b, --broker-base-url=$PACT_BROKER_URL -u=${{secrets.pactBrokerUsername}} -p=${{secrets.pactBrokerPassword}} --latest 
