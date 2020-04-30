@@ -37,10 +37,6 @@ jobs:
     env:
         PACT_BROKER_URL: https://pact-broker.int.k8s.getmobee.com/
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
       - name: Can i Deploy
         run: |
             curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.83.0/pact-1.83.0-linux-x86_64.tar.gz tar xzf pact-1.83.0-linux-x86_64.tar.gz
