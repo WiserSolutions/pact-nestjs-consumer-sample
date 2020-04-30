@@ -30,7 +30,7 @@ describe('Pact Testing', () => {
     log: path.resolve(process.cwd(), "logs", "mockserver-integration.log"),
     dir: path.resolve(process.cwd(), "pacts"),
     spec: 2,
-    consumer: "catsCosumer",
+    consumer: "catsConsumer",
     provider: "catsPovider",
   })
 
