@@ -27,11 +27,6 @@ jobs:
         run: docker build -t loneconsumer .
       - name: Run Builded Image
         run: docker run -p 3001:3001 --env PACT_BROKER_URL=$PACT_BROKER_URL --env PACT_BROKER_PASSWORD=${{secrets.pactBrokerPassword}} --env PACT_BROKER_USERNAME=${{secrets.pactBrokerUsername}} --env CONSUMER_VERSION=$GITHUB_SHA --env PACT_MOCK_URL=$PACT_MOCK_URL --env PROVIDER_URL=http://localhost:3000  -t loneconsumer 
-      - name: Can i Deploy
-        run: |
-            curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.83.0/pact-1.83.0-linux-x86_64.tar.gz tar xzf pact-1.83.0-linux-x86_64.tar.gz
-            cd pact/bin
-            ./pact-broker can-i-deploy -a, --pacticipant=catsConsumer -b, --broker-base-url=$PACT_BROKER_URL -u=${{secrets.pactBrokerUsername}} -p=${{secrets.pactBrokerPassword}} --latest 
   cd:
     runs-on: ubuntu-latest
     env:
