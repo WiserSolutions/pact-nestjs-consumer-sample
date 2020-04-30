@@ -11,4 +11,6 @@ COPY . .
 
 EXPOSE 3001
 
-CMD npm run test:pact
+CMD ["run","test:pact"]
+
+ENTRYPOINT [ "npm" ]
