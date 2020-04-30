@@ -31,4 +31,4 @@ jobs:
         run: |
             curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.83.0/pact-1.83.0-linux-x86_64.tar.gz tar xzf pact-1.83.0-linux-x86_64.tar.gz
             cd pact/bin
-            ./pact-broker can-i-deploy -a, --pacticipant=catsConsumer -b, --broker-base-url=https://pact-broker.int.k8s.getmobee.com/ -u=pact_nest_poc -p=pact_nest_poc1 --latest 
+            ./pact-broker can-i-deploy -a, --pacticipant=catsConsumer -b, --broker-base-url=$PACT_BROKER_URL -u=${{secrets.pactBrokerUsername}} -p=${{secrets.pactBrokerPassword}} --latest 
