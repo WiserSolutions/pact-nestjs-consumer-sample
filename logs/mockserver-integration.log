@@ -112,4 +112,4 @@ D, [2020-04-11T23:42:11.009310 #98257] DEBUG -- : {
 }
 I, [2020-04-11T23:42:11.012853 #98257]  INFO -- : Verifying - interactions matched
 I, [2020-04-11T23:42:11.015687 #98257]  INFO -- : Cleared interactions
-I, [2020-04-11T23:42:11.049130 #98257]  INFO -- : Writing pact for catsPovider to /Users/wellingtonaquino/Documents/wiser-repo/pact-consumer-provider-test/nestjs/pact-consumer/pacts/catsconsumer-catspovider.json
+I, [2020-04-11T23:42:11.049130 #98257]  INFO -- : Writing pact for catsProvider to /Users/wellingtonaquino/Documents/wiser-repo/pact-consumer-provider-test/nestjs/pact-consumer/pacts/catsconsumer-catsprovider.json

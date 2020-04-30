@@ -31,7 +31,7 @@ describe('Pact Testing', () => {
     dir: path.resolve(process.cwd(), "pacts"),
     spec: 2,
     consumer: "catsConsumer",
-    provider: "catsPovider",
+    provider: "catsProvider",
   })
 
   const catExample: Cat = {
