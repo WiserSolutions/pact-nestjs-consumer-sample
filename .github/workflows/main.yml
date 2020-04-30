@@ -32,3 +32,17 @@ jobs:
             curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.83.0/pact-1.83.0-linux-x86_64.tar.gz tar xzf pact-1.83.0-linux-x86_64.tar.gz
             cd pact/bin
             ./pact-broker can-i-deploy -a, --pacticipant=catsConsumer -b, --broker-base-url=$PACT_BROKER_URL -u=${{secrets.pactBrokerUsername}} -p=${{secrets.pactBrokerPassword}} --latest 
+  cd:
+    runs-on: ubuntu-latest
+    env:
+        PACT_BROKER_URL: https://pact-broker.int.k8s.getmobee.com/
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Can i Deploy
+        run: |
+            curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.83.0/pact-1.83.0-linux-x86_64.tar.gz tar xzf pact-1.83.0-linux-x86_64.tar.gz
+            cd pact/bin
+            ./pact-broker can-i-deploy -a, --pacticipant=catsConsumer -b, --broker-base-url=$PACT_BROKER_URL -u=${{secrets.pactBrokerUsername}} -p=${{secrets.pactBrokerPassword}} --latest 
