@@ -91,7 +91,6 @@ describe('Pact Testing', () => {
       return provider.addInteraction(interaction)
     });
 
-
     it("returns the correct response", done => {
       catsService.setUrl(url);
       catsService.getCatPlain().then((response: any) => {
