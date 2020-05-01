@@ -36,7 +36,7 @@ describe('Pact Testing', () => {
 
   const catExample: Cat = {
     'name': 'cat',
-    'age': 12,
+    'age': 15,
     'breed': 'angora'
   };
   const EXPECTED_BODY = like(catExample);
