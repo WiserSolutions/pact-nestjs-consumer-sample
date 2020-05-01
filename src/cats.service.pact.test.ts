@@ -82,7 +82,7 @@ describe('Pact Testing', () => {
           },
         })
         .willRespondWith({
-          status: 400,
+          status: 200,
           headers: {
             "Content-Type": "application/json; charset=utf-8",
           },
@@ -115,7 +115,7 @@ describe('Pact Testing', () => {
           },
         },
         willRespondWith: {
-          status: 400,
+          status: 200,
           headers: {
             "Content-Type": "application/json; charset=utf-8",
           },
