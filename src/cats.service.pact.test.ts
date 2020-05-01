@@ -36,7 +36,7 @@ describe('Pact Testing', () => {
 
   const catExample: Cat = {
     'name': 'cat',
-    'age': 15,
+    'age': 12,
     'breed': 'angora'
   };
   const EXPECTED_BODY = like(catExample);
@@ -82,7 +82,7 @@ describe('Pact Testing', () => {
           },
         })
         .willRespondWith({
-          status: 200,
+          status: 400,
           headers: {
             "Content-Type": "application/json; charset=utf-8",
           },
@@ -115,7 +115,7 @@ describe('Pact Testing', () => {
           },
         },
         willRespondWith: {
-          status: 200,
+          status: 400,
           headers: {
             "Content-Type": "application/json; charset=utf-8",
           },
