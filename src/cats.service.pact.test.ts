@@ -53,17 +53,6 @@ describe('Pact Testing', () => {
   );
 
   afterAll(() => {
-    console.log('consumer version: '+consumerVersion);
-    console.log('mock url: '+url);
-    console.log('broker url: '+pactBrokerUrl);
-    console.log('p: '+pactBrokerPassword);
-    console.log('u: '+pactBrokerUsername);
-    
-    pact.publishPacts(publishBrokerOpts).then(() => {
-      console.log('Pact contract publishing complete!');
-    }).catch(e => {
-        console.log('Pact contract publishing failed: ', e)
-      });
       provider.finalize();
   });
 

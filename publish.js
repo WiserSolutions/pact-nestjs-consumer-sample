@@ -1,16 +1,18 @@
-import { publishPacts } from "@pact-foundation/pact-node";
-import { resolve } from "path";
+const publisher = require('@pact-foundation/pact-node')
+const path = require('path')
 
 const pactBrokerUrl = process.env.PACT_BROKER_URL || 'http://localhost:8081';
 const pactBrokerUsername = process.env.PACT_BROKER_USERNAME || 'pact_workshop';
 const pactBrokerPassword = process.env.PACT_BROKER_PASSWORD || 'pact_workshop';
+const consumerVersion = process.env.CONSUMER_VERSION || '1.0.1';
 
 const opts = {
-  pactFilesOrDirs: [resolve(process.cwd(), "pacts")],
+  pactFilesOrDirs: [path.resolve(process.cwd(), "pacts")],
   pactBroker: pactBrokerUrl,
   pactBrokerUsername: pactBrokerUsername,
   pactBrokerPassword: pactBrokerPassword,
-  consumerVersion: "2.0.0",
+  consumerVersion: consumerVersion,
 }
 
-publishPacts(opts)
+publisher.publishPacts(opts).then(
+  () => console.log('Pacts successfully published'))
