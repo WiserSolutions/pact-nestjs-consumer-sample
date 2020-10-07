@@ -69,7 +69,7 @@ $ npm run test:pact
 docker build -t nest-consumer .    
 
 # run the image
-docker run -p 3000:3000  nest-consumer 
+docker run -p 3000:3000  nest-consumer
 ```
 
 
