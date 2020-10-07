@@ -12,6 +12,7 @@ const opts = {
   pactBrokerUsername: pactBrokerUsername,
   pactBrokerPassword: pactBrokerPassword,
   consumerVersion: consumerVersion,
+  tags: ['prod', 'test'],
 }
 
 publisher.publishPacts(opts).then(
