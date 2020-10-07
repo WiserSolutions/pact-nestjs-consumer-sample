@@ -8,7 +8,7 @@
   "interactions": [
     {
       "description": "a request for the cat with the builder pattern",
-      "providerState": "I have a single cat",
+      "providerState": "I have a single cat with color",
       "request": {
         "method": "GET",
         "path": "/cats",
@@ -24,7 +24,8 @@
         "body": {
           "name": "cat",
           "age": 12,
-          "breed": "angora"
+          "breed": "angora",
+          "color": "orange"
         },
         "matchingRules": {
           "$.body": {
@@ -35,7 +36,7 @@
     },
     {
       "description": "a request for cat with the object pattern",
-      "providerState": "I have a single cat object",
+      "providerState": "I have a single cat object with color",
       "request": {
         "method": "GET",
         "path": "/cats",
@@ -51,7 +52,8 @@
         "body": {
           "name": "cat",
           "age": 12,
-          "breed": "angora"
+          "breed": "angora",
+          "color": "orange"
         },
         "matchingRules": {
           "$.body": {

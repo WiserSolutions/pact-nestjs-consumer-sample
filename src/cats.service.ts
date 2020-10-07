@@ -12,7 +12,8 @@ export class CatService {
         return {
             'name': 'cat',
             'age': 12,
-            'breed': 'angora'
+            'breed': 'angora',
+            'color': 'orange'
         };
     }
 
