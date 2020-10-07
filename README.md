@@ -58,7 +58,20 @@ $ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
+
+# test contract
+$ npm run test:pact
 ```
+
+## run with docker
+```bash
+# build the image
+docker build -t nest-consumer .    
+
+# run the image
+docker run -p 3000:3000  nest-consumer
+```
+
 
 ## Support
 
