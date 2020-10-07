@@ -25,7 +25,8 @@ describe('Basic Test Cats Service', () => {
       const result: Cat = {
         'name': 'cat',
         'age': 12,
-        'breed': 'angora'
+        'breed': 'angora',
+        'color': 'orange'
       };
       jest.spyOn(catsService, 'getCatMock').mockImplementation(()=> result);
       expect (catsService.getCatMock()).toMatchObject(result);
