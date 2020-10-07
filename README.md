@@ -61,6 +61,9 @@ $ npm run test:cov
 
 # test contract
 $ npm run test:pact
+
+# test publsh contract to the broker
+$ npm run publish:pact 
 ```
 
 ## run with docker
@@ -72,7 +75,11 @@ docker build -t nest-consumer .
 docker run -p 3000:3000  nest-consumer
 ```
 
+## CI/CD
 
+  This CI/CD the pact validation is in place for the github actions when a new version of the consumer is generated the provider validation will be triggered 
+  [Flow description !](https://github.com/WiserSolutions/pact-consumer-provider-test/blob/master/pact-jvm/images/consumer-provider.png)
+  
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
