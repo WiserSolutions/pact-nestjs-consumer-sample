@@ -37,7 +37,8 @@ describe('Pact Testing', () => {
   const catExample: Cat = {
     'name': 'cat',
     'age': 12,
-    'breed': 'angora'
+    'breed': 'angora',
+    'color': 'orange',
   };
   const EXPECTED_BODY = like(catExample);
 
@@ -61,7 +62,7 @@ describe('Pact Testing', () => {
   describe("get /cats using builder pattern", () => {
     beforeAll(() => {
       const interaction = new Interaction()
-        .given("I have a single cat")
+        .given("I have a single cat with color")
         .uponReceiving("a request for the cat with the builder pattern")
         .withRequest({
           method: "GET",
@@ -94,7 +95,7 @@ describe('Pact Testing', () => {
   describe("get /cats using object pattern", () => {
     beforeAll(() => {
       return provider.addInteraction({
-        state: "I have a single cat object",
+        state: "I have a single cat object with color",
         uponReceiving: "a request for cat with the object pattern",
         withRequest: {
           method: "GET",

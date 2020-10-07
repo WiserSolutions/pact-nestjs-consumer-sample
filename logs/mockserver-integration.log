@@ -1,7 +1,7 @@
-I, [2020-10-07T14:13:48.912566 #42211]  INFO -- : Registered expected interaction GET /cats
-D, [2020-10-07T14:13:48.912887 #42211] DEBUG -- : {
+I, [2020-10-07T15:54:07.674584 #49063]  INFO -- : Registered expected interaction GET /cats
+D, [2020-10-07T15:54:07.674852 #49063] DEBUG -- : {
   "description": "a request for the cat with the builder pattern",
-  "providerState": "I have a single cat",
+  "providerState": "I have a single cat with color",
   "request": {
     "method": "GET",
     "path": "/cats",
@@ -19,14 +19,15 @@ D, [2020-10-07T14:13:48.912887 #42211] DEBUG -- : {
       "contents": {
         "name": "cat",
         "age": 12,
-        "breed": "angora"
+        "breed": "angora",
+        "color": "orange"
       }
     }
   },
   "metadata": null
 }
-I, [2020-10-07T14:13:48.923226 #42211]  INFO -- : Received request GET /cats
-D, [2020-10-07T14:13:48.923330 #42211] DEBUG -- : {
+I, [2020-10-07T15:54:07.683979 #49063]  INFO -- : Received request GET /cats
+D, [2020-10-07T15:54:07.684122 #49063] DEBUG -- : {
   "path": "/cats",
   "query": "",
   "method": "get",
@@ -38,8 +39,8 @@ D, [2020-10-07T14:13:48.923330 #42211] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2020-10-07T14:13:48.923672 #42211]  INFO -- : Found matching response for GET /cats
-D, [2020-10-07T14:13:48.923754 #42211] DEBUG -- : {
+I, [2020-10-07T15:54:07.684519 #49063]  INFO -- : Found matching response for GET /cats
+D, [2020-10-07T15:54:07.684646 #49063] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json; charset=utf-8"
@@ -49,16 +50,17 @@ D, [2020-10-07T14:13:48.923754 #42211] DEBUG -- : {
     "contents": {
       "name": "cat",
       "age": 12,
-      "breed": "angora"
+      "breed": "angora",
+      "color": "orange"
     }
   }
 }
-I, [2020-10-07T14:13:48.931964 #42211]  INFO -- : Verifying - interactions matched
-I, [2020-10-07T14:13:48.936233 #42211]  INFO -- : Cleared interactions
-I, [2020-10-07T14:13:48.942232 #42211]  INFO -- : Registered expected interaction GET /cats
-D, [2020-10-07T14:13:48.942508 #42211] DEBUG -- : {
+I, [2020-10-07T15:54:07.691479 #49063]  INFO -- : Verifying - interactions matched
+I, [2020-10-07T15:54:07.696763 #49063]  INFO -- : Cleared interactions
+I, [2020-10-07T15:54:07.703196 #49063]  INFO -- : Registered expected interaction GET /cats
+D, [2020-10-07T15:54:07.703327 #49063] DEBUG -- : {
   "description": "a request for cat with the object pattern",
-  "providerState": "I have a single cat object",
+  "providerState": "I have a single cat object with color",
   "request": {
     "method": "GET",
     "path": "/cats",
@@ -76,14 +78,15 @@ D, [2020-10-07T14:13:48.942508 #42211] DEBUG -- : {
       "contents": {
         "name": "cat",
         "age": 12,
-        "breed": "angora"
+        "breed": "angora",
+        "color": "orange"
       }
     }
   },
   "metadata": null
 }
-I, [2020-10-07T14:13:48.949719 #42211]  INFO -- : Received request GET /cats
-D, [2020-10-07T14:13:48.949940 #42211] DEBUG -- : {
+I, [2020-10-07T15:54:07.708317 #49063]  INFO -- : Received request GET /cats
+D, [2020-10-07T15:54:07.708424 #49063] DEBUG -- : {
   "path": "/cats",
   "query": "",
   "method": "get",
@@ -95,8 +98,8 @@ D, [2020-10-07T14:13:48.949940 #42211] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2020-10-07T14:13:48.950176 #42211]  INFO -- : Found matching response for GET /cats
-D, [2020-10-07T14:13:48.950289 #42211] DEBUG -- : {
+I, [2020-10-07T15:54:07.708583 #49063]  INFO -- : Found matching response for GET /cats
+D, [2020-10-07T15:54:07.708795 #49063] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json; charset=utf-8"
@@ -106,10 +109,11 @@ D, [2020-10-07T14:13:48.950289 #42211] DEBUG -- : {
     "contents": {
       "name": "cat",
       "age": 12,
-      "breed": "angora"
+      "breed": "angora",
+      "color": "orange"
     }
   }
 }
-I, [2020-10-07T14:13:48.956327 #42211]  INFO -- : Verifying - interactions matched
-I, [2020-10-07T14:13:48.961092 #42211]  INFO -- : Cleared interactions
-I, [2020-10-07T14:13:48.997769 #42211]  INFO -- : Writing pact for catsProvider to /Users/wellingtonaquino/Documents/wiser-repo/pact-nestjs-consumer-sample/pacts/catsconsumer-catsprovider.json
+I, [2020-10-07T15:54:07.713286 #49063]  INFO -- : Verifying - interactions matched
+I, [2020-10-07T15:54:07.716942 #49063]  INFO -- : Cleared interactions
+I, [2020-10-07T15:54:07.739523 #49063]  INFO -- : Writing pact for catsProvider to /Users/wellingtonaquino/Documents/wiser-repo/pact-nestjs-consumer-sample/pacts/catsconsumer-catsprovider.json
